@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#05060a" />
+    <title>THE WORLD OF CODE</title>
+    <meta name="description" content="Every great software engineer is shaped by the world. An endless cinematic journey across Earth's most beautiful places — where every destination is a software engineering discipline." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- instant cover so there's never a white flash before the engine boots -->
+    <div class="veil" style="position:fixed;inset:0;z-index:60;background:#05060a;display:grid;place-items:center;">
+      <div class="spark"></div>
+    </div>
+
+    <!-- WebGL journey renders here, fixed behind everything -->
+    <canvas id="stage"></canvas>
+
+    <!-- Tall spacer that gives us real scroll length; Lenis smooths it -->
+    <div id="scroll-track"></div>
+
+    <!-- cinematic framing, sits between the canvas and the UI -->
+    <div class="vignette"></div>
+
+    <!-- Cinematic overlay UI (intro terminal + HUD) is injected by JS -->
+    <div id="ui-root"></div>
+
+    <noscript>
+      <div style="position:fixed;inset:0;display:grid;place-items:center;background:#05060a;color:#e8e6df;font-family:sans-serif;text-align:center;padding:2rem;">
+        THE WORLD OF CODE needs JavaScript & WebGL to take flight.
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
